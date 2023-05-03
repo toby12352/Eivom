@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Eivom</string>
+
+    //Error
+    <string name="loading_error">Unable to fetch Movie data.  Error message: %1$s</string>
+    <string name="loading_error_tvshow">Unable to fetch TvShow data.  Error message: %1$s</string>
+    <string name="loading_error_person">Unable to fetch Person data.  Error message: %1$s</string>
+
+    //Fragment Labels
+    <string name="label_movie_info">Eivom</string>
+    <string name="label_category_trending">Trending Movies</string>
+    <string name="label_movie_detail">Movie Detail</string>
+
+    <string name="label_category_tvshow">Trending TV Shows</string>
+    <string name="label_category_people">Popular People</string>
+
+    <string name="label_person_detail">Person Detail</string>
+
+    <string name="label_tvshow_detail">TV Show Detail</string>
+
+    <string name="movie_title">%1$s</string>
+    <string name="movie_description">%1$s</string>
+    <string name="movie_release_date">%1$s</string>
+    <string name="movie_rating">%1$s</string>
+
+    <string name="tv_name">%1$s</string>
+    <string name="tv_overview">%1$s</string>
+    <string name="tv_first_air_date">%1$s</string>
+    <string name="tv_rating">%1$s</string>
+
+    <string name="person_name">%1$s</string>
+    <string name="person_gender">%1$s</string>
+    <string name="person_popularity">%1$s</string>
+
+    //Share Button
+    <string name="action_share">Share</string>
+    <string name="share_text">%1$s : %2$s</string>
+</resources>

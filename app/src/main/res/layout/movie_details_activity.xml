@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/personPoster"
+            android:layout_width="169dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/personTitle"
+            app:layout_constraintTop_toBottomOf="@+id/personTitle"
+            app:srcCompat="@drawable/sample_movie_poster" />
+
+        <TextView
+            android:id="@+id/personTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:text="movieTitle"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBackdropTitle"
+            android:layout_width="149dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="44dp"
+            android:text="Official Trailer:"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/personPoster"
+            app:layout_constraintTop_toBottomOf="@+id/personPoster" />
+
+        <TextView
+            android:id="@+id/movieRating"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Rating"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/movieReleaseDate"
+            app:layout_constraintTop_toBottomOf="@+id/movieReleaseDate" />
+
+        <TextView
+            android:id="@+id/movieReleaseDate"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="16dp"
+            android:text="Release Date"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/movieTrailer"
+            android:layout_width="346dp"
+            android:layout_height="215dp"
+            android:layout_marginTop="16dp"
+            app:autoPlay="true"
+            app:enableAutomaticInitialization="false"
+            app:layout_constraintStart_toStartOf="@+id/tvBackdropTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvBackdropTitle"
+            app:videoId="NsUWXo8M7UA" />
+
+        <ScrollView
+            android:layout_width="186dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/movieRating"
+            app:layout_constraintTop_toBottomOf="@+id/movieRating">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/personAppearsIn"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Description"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/movieRating"
+                    app:layout_constraintTop_toBottomOf="@+id/movieRating" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

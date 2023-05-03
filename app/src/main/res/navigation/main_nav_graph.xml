@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/movieInfo">
+
+    <fragment
+        android:id="@+id/movieInfo"
+        android:name="com.example.eivom.ui.MovieInfoFragment"
+        android:label="@string/label_movie_info">
+        <action
+            android:id="@+id/navigate_to_movie_detail"
+            app:destination="@id/moviedetail"/>
+        <action
+            android:id="@+id/navigate_to_tvshow_detail"
+            app:destination="@id/tvshowdetail"/>
+        <action
+            android:id="@+id/navigate_to_person_detail"
+            app:destination="@id/persondetail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/moviedetail"
+        android:name="com.example.eivom.ui.MovieDetailFragment"
+        android:label="@string/label_movie_detail">
+        <argument
+            android:name="moviedetail"
+            app:argType="com.example.eivom.data.MovieList"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvshowdetail"
+        android:name="com.example.eivom.ui.TvShowDetailFragment"
+        android:label="@string/label_tvshow_detail">
+        <argument
+            android:name="tvshowdetail"
+            app:argType="com.example.eivom.data.TvShowList"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/persondetail"
+        android:name="com.example.eivom.ui.PersonDetailFragment"
+        android:label="@string/label_person_detail">
+        <argument
+            android:name="persondetail"
+            app:argType="com.example.eivom.data.PersonList"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteMovie"
+        android:name="com.example.eivom.ui.FavoriteMoviesFragment"
+        android:label="Favorite Movies">
+        <argument
+            android:name="favorites"
+            app:argType="com.example.eivom.data.MovieList"/>
+        <action
+            android:id="@+id/navigate_to_movie_detail"
+            app:destination="@id/moviedetail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteTvShow"
+        android:name="com.example.eivom.ui.FavoriteTvShowFragment"
+        android:label="Favorite Tv Shows">
+        <action
+            android:id="@id/navigate_to_tvshow_detail"
+            app:destination="@id/tvshowdetail"/>
+    </fragment>
+
+</navigation>

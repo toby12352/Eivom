@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/personPoster"
+            android:layout_width="169dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/personName"
+            app:layout_constraintTop_toBottomOf="@+id/personName"
+            app:srcCompat="@drawable/sample_movie_poster" />
+
+        <TextView
+            android:id="@+id/personName"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:text="personName"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/personAppearsIn"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Appears In:"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="@+id/personName"
+            app:layout_constraintTop_toBottomOf="@+id/personPoster" />
+
+        <TextView
+            android:id="@+id/knownFor"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="16dp"
+            android:text="Known For"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="16dp"
+            android:text="Gender"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/popularity"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="16dp"
+            android:text="Popularity"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/personAppearsInList1"
+            android:layout_width="169dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/personPoster"
+            app:layout_constraintTop_toBottomOf="@+id/personAppearsIn"
+            app:srcCompat="@drawable/sample_movie_poster"/>
+
+        <ImageView
+            android:id="@+id/personAppearsInList2"
+            android:layout_width="169dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="170dp"
+            app:layout_constraintStart_toStartOf="@+id/personPoster"
+            app:layout_constraintTop_toBottomOf="@+id/personAppearsIn"
+            app:srcCompat="@drawable/sample_movie_poster"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

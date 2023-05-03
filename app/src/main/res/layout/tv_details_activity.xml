@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/tvshowPoster"
+            android:layout_width="169dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/tvshowTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvshowTitle"
+            app:srcCompat="@drawable/sample_movie_poster" />
+
+        <TextView
+            android:id="@+id/tvshowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:text="tvTitle"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBackdropTitle"
+            android:layout_width="149dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="44dp"
+            android:text="Quick Look"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="@+id/tvshowPoster"
+            app:layout_constraintTop_toBottomOf="@+id/tvshowPoster" />
+
+        <TextView
+            android:id="@+id/tvShowRating"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Rating"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintStart_toStartOf="@+id/tvFirstAirDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstAirDate" />
+
+        <TextView
+            android:id="@+id/tvFirstAirDate"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="16dp"
+            android:text="First Air Date"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tvBackdropImage"
+            android:layout_width="352dp"
+            android:layout_height="207dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tvBackdropTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvBackdropTitle"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ScrollView
+            android:layout_width="186dp"
+            android:layout_height="178dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tvShowRating"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowRating">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvshowOverview"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Description"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/tvShowRating"
+                    app:layout_constraintTop_toBottomOf="@+id/tvShowRating" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
